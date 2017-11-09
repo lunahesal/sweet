@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import LoginContainer from './LoginContainer'
 import SignupContainer from './SignupContainer'
+import DishContainer from './DishContainer'
 import NotFound from '../components/NotFound'
-import Header from '../components/Header'
+import Layout from '../components/Layout/Layout'
 import {
   Switch,
   Route
@@ -12,12 +13,14 @@ class LayoutContainer extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <Switch>
-          <Route path='/login' component={LoginContainer} />
-          <Route path='/signup' component={SignupContainer} />
-          <Route component={NotFound} />
-        </Switch>
+        <Layout>
+          <Switch>
+            <Route path='/login' component={LoginContainer} />
+            <Route path='/signup' component={SignupContainer} />
+            <Route path='/dish' component={DishContainer} />
+            <Route component={NotFound} />
+          </Switch>
+        </Layout>
       </div>
     )
   }
