@@ -14,9 +14,16 @@ class Login extends Component {
         placeholder:'密码'
       }
     ]
+    const title = '登录'
+    const option = {
+      text:'没有账号，请先注册',
+      link:'./signup'
+    }
     return (
       <div className='login'>
-        <Form fields = { fields } />
+        <Form fields = { fields }
+          option={ option }
+          title = { title }/>
       </div>
     )
   }

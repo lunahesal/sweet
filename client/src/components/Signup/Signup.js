@@ -24,10 +24,17 @@ class Signup extends Component {
         placeholder:'email'
       }
     ]
+    const title = '注册'
+    const option = {
+      text:'已有账号，直接登录',
+      link:'./login'
+    }
 
     return (
       <div className='signup'>
-        <Form fields = { fields }/>
+        <Form fields = { fields }
+          title = { title }
+          option={ option }/>
       </div>
     )
   }
