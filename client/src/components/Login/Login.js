@@ -6,10 +6,14 @@ class Login extends Component {
   render() {
     const fields = [
       {
+        name:'username',
+        refName:'usernameInput',
         type:'text',
         placeholder:'用户名'
       },
       {
+        name:'password',
+        refName:'passwordInput',
         type:'password',
         placeholder:'密码'
       }
